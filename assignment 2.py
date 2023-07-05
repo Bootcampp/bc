@@ -42,7 +42,6 @@ def calculate_gpa():
     num_courses = int(input("Enter the number of courses: "))
     total_credits = 0
     total_grade_points = 0
-    grade_counts = {'A': 0, 'B+': 0, 'B': 0, 'C+': 0, 'C': 0, 'D+': 0, 'D': 0, 'F': 0}
 
     for _ in range(num_courses):
         numerical_grade = float(input("Enter the numerical grade (out of 100): "))
@@ -57,10 +56,6 @@ def calculate_gpa():
 
     cumulative_gpa = total_grade_points / total_credits
     honors_category = get_honors_category(cumulative_gpa)
-
-    print("\nGrade Counts:")
-    for grade, count in grade_counts.items():
-        print(f"{grade}: {count}")
 
     print(f"\nCumulative GPA: {cumulative_gpa:.2f}")
     print(f"Honors Category: {honors_category}")
